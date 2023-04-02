@@ -1,0 +1,72 @@
+#include <stdio.h>
+
+int main()
+{
+ int day;
+ printf("day: ");
+ scanf("%i1",&day);
+ int month;
+ printf("month: ");
+ scanf("%i1",&month);
+ int year;
+ printf("year: ");
+ scanf("%i1",&year);
+                 //знак зодиака
+    if((month==12)&&(day==21,31)||(month==1)&&(day==1,19))
+    {printf("водолей, ");}
+    if((month==1)&&(day==20,31)||(month==2)&&(day==1,20))
+    {printf("рыбы, ");}
+    if((month==2)&&(day==21,31)||(month==3)&&(day==1,20))
+    {printf("овен, ");}
+    if((month==3)&&(day==21,31)||(month==4)&&(day==1,21))
+    {printf("телец, ");}
+    if((month==4)&&(day==22,31)||(month==5)&&(day==1,21))
+    {printf("близнецы, ");}
+    if((month==5)&&(day==22,31)||(month==6)&&(day==1,22))
+    {printf("рак, ");}
+    if((month==6)&&(day==23,31)||(month==7)&&(day==1,21))
+    {printf("лев, ");}
+    if((month==7)&&(day==22,31)||(month==8)&&(day==1,23))
+    {printf("дева, ");}
+    if((month==8)&&(day==24,31)||(month==9)&&(day==1,23))
+    {printf("весы, ");}
+    if((month==9)&&(day==24,31)||(month==10)&&(day==1,22))
+    {printf("скорпион, ");}
+    if((month==10)&&(day==23,31)||(month==11)&&(day==1,22))
+    {printf("стрелец, ");}
+    if((month==11)&&(day==23,31)||(month==12)&&(day==1,20))
+    {printf("козерог, ");}
+                //високосный год
+    if(year%4==0)
+        {if(year%100==0)
+            {if(year%400==0)
+            printf("родился в високосный год, ");
+            else printf("родился в не високосный год, ");}
+        else printf("родился в високосный год, ");}
+    else printf("родился в не високосный год, ");
+                //тотемы китайского календаря
+    if((year==1960)||(year==1972)||(year==1984)||(year==1996)||(year==2008))
+        printf("год крысы");
+    if((year==1961)||(year==1973)||(year==1985)||(year==1997)||(year==2009))
+        printf("год быка");
+    if((year==1962)||(year==1974)||(year==1986)||(year==1998)||(year==2010))
+        printf("год тигра");
+    if((year==1963)||(year==1975)||(year==1987)||(year==1999)||(year==2011))
+        printf("год кролика");
+    if((year==1964)||(year==1976)||(year==1988)||(year==2000)||(year==2012))
+        printf("год дракона");
+    if((year==1965)||(year==1977)||(year==1989)||(year==2001)||(year==2013))
+        printf("год змеи");
+    if((year==1966)||(year==1978)||(year==1990)||(year==2002)||(year==2014))
+        printf("год лошади");
+    if((year==1967)||(year==1979)||(year==1991)||(year==2003)||(year==2015))
+        printf("год козы");
+    if((year==1968)||(year==1980)||(year==1992)||(year==2004)||(year==2016))
+        printf("год обезьяны");
+    if((year==1969)||(year==1981)||(year==1993)||(year==2005)||(year==2017))
+        printf("год петуха");
+    if((year==1970)||(year==1982)||(year==1994)||(year==2006)||(year==2018))
+        printf("год собаки");
+    if((year==1971)||(year==1983)||(year==1995)||(year==2007)||(year==2019))
+        printf("год свиньи");
+}
