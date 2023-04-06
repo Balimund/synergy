@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+main()
+{
+    int a=21;
+    while(a!=7)
+    {
+        scanf("%i",&a);
+        if(a>7)
+        {
+        printf("больше\n");
+        }
+        if(a<7)
+        {
+        printf("меньше\n");
+        }
+        if(a>10)
+        {
+        printf("больше 10\n");
+        }
+        else
+        {
+        printf("меньше 10\n");
+        }
+        if(a%2==0)
+        {
+        printf("делится на 2\n");
+        }
+        else
+        {
+        printf("не делится на 2\n");
+        }
+        if(a%3==0)
+        {
+        printf("делится на 3\n");
+        }
+        else
+        {
+        printf("не делится на 3\n");
+        }
+                
+    }
+    printf("угадал\n");
+}
