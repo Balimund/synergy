@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    int rows, cols;
+
+    printf("Введите количество строк и столбцов через пробел: ");
+    scanf("%d %d", &rows, &cols);
+
+    int arr[rows][cols];
+
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < cols; j++) {
+            printf("Введите элемент [%d][%d]: ", i, j);
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    printf("Введенный массив:\n");
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < cols; j++) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+
+    // перестановка первого и последнего столбца
+    for(int i = 0; i < rows; i++) {
+        int tmp = arr[i][0];
+        arr[i][0] = arr[i][cols - 1];
+        arr[i][cols - 1] = tmp;
+    }
+
+    printf("Массив после перестановки первого и последнего столбца:\n");
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < cols; j++) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
