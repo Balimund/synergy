@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    int rows, cols;
+
+    printf("Введите количество строк и столбцов через пробел: ");
+    scanf("%d %d", &rows, &cols);
+
+    int arr[rows][cols];
+
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < cols; j++) {
+            printf("Введите элемент [%d][%d]: ", i, j);
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    printf("Введенный массив:\n");
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < cols; j++) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+
+    // выполнение инверсии по главной диагонали
+    for(int i = 0; i < rows; i++) {
+        for(int j = i + 1; j < cols; j++) { // обходим только верхний треугольник
+            int tmp = arr[i][j];
+            arr[i][j] = arr[j][i];
+            arr[j][i] = tmp;
+        }
+    }
+
+    printf("Инвертированный массив:\n");
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < cols; j++) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
