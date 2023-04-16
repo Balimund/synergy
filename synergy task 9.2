@@ -1,0 +1,23 @@
+#include <iostream>
+
+int main() {
+    int n;
+    std::cout << "Введите количество элементов массива: ";
+    std::cin >> n;
+
+    int arr[n];
+
+    // ввод элементов массива
+    for (int i = 0; i < n; i++) {
+        std::cout << "Введите " << i + 1 << "-й элемент массива: ";
+        std::cin >> arr[i];
+    }
+
+    // вывод элементов массива
+    for (int i = 0; i < n; i++) {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
