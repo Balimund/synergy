@@ -1,0 +1,79 @@
+#!/bin/bash
+
+# Инициализация игрового поля
+field=(
+  "..........."
+  "..........."
+  "..........."
+  "..........."
+  "....Z......"
+  "..........."
+  "..........."
+  "..........."
+  "..........."
+  "..........."
+)
+
+# Координаты персонажа и зомби
+player_x=0
+player_y=0
+zombie_x=4
+zombie_y=4
+
+# Функция для отрисовки игрового поля
+draw_field() {
+  clear
+  for ((i=0; i<${#field[@]}; i++)); do
+    echo "${field[$i]}"
+  done
+}
+
+# Функция для перемещения персонажа
+move_player() {
+  read -n 1 -s direction
+  case $direction in
+    w)
+      if (($player_x > 0)); then
+        field[$player_x][$player_y]="."
+        ((player_x--))
+        field[$player_x][$player_y]="P"
+      fi
+      ;;
+    s)
+      if (($player_x < $((${#field[@]}-1)))); then
+        field[$player_x][$player_y]="."
+        ((player_x++))
+        field[$player_x][$player_y]="P"
+      fi
+      ;;
+    a)
+      if (($player_y > 0)); then
+        field[$player_x][$player_y]="."
+        ((player_y--))
+        field[$player_x][$player_y]="P"
+      fi
+      ;;
+    d)
+      if (($player_y < $((${#field[$player_x]}-1)))); then
+        field[$player_x][$player_y]="."
+        ((player_y++))
+        field[$player_x][$player_y]="P"
+      fi
+      ;;
+  esac
+}
+
+# Функция для проверки столкновения с зомби
+check_collision() {
+  if (($player_x == $zombie_x && $player_y == $zombie_y)); then
+    echo "Game Over! You were caught by the zombie."
+    exit
+  fi
+}
+
+# Главный игровой цикл
+while true; do
+  draw_field
+  move_player
+  check_collision
+done
