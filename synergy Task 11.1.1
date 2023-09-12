@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Размер матрицы
+N=100
+
+# Создаем случайные матрицы A и B
+for i in seq 1 $N; do
+  for j in seq 1 $N; do
+    A[$i,$j]=$RANDOM
+    B[$i,$j]=$RANDOM
+  done
+done
+
+# Функция для вычисления части результата
+calculate() {
+  start=$1
+  end=$2
+  for i in seq $start $end; do
+    for j in seq 1 $N; do
+      C[$i,$j]=0
+      for k in seq 1 $N; do
+        C[$i,$j]=$((${A[$i,$k]}*${B[$k,$j]}+${C[$i,$j]}))
+      done
+    done
+  done
+}
+
+# Запускаем 4 процесса для вычисления 4 частей результата
+for i in seq 0 3; do
+  calculate $(($i*$N/4+1)) $((($i+1)*$N/4))
+done
+
+# Собираем результаты от всех процессов
+for i in seq 1 $N; do
+  for j in seq 1 $N; do
+    result=$((${C[1,$j]}+${C[2,$j]}+${C[3,$j]}+${C[4,$j]}))
+    echo -n "$result "
+  done
+  echo ""
+done
