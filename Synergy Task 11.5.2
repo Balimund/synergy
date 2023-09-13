@@ -1,0 +1,20 @@
+import socket
+
+# Считываем название сервера и порт с клавиатуры
+server_name = input("Введите адрес сервера: ")
+server_port = int(input("Введите порт сервера: "))
+
+# Создаем сетевой сокет
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+try:
+    # Подключаемся к серверу
+    sock.connect((server_name, server_port))
+
+    # Посылаем название сокета на сервер
+    socket_name = input("Введите название сокета: ")
+    sock.send(socket_name.encode())
+
+finally:
+    # Закрываем соединение
+    sock.close()
