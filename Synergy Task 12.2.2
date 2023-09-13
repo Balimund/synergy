@@ -1,0 +1,18 @@
+# coding=windows-1251
+# Ввод слова от пользователя
+word = input("Введите слово из маленьких латинских букв: ")
+
+# Инициализация счетчиков гласных и согласных
+vowels_count = 0
+consonants_count = 0
+
+# Подсчет гласных и согласных букв
+for letter in word:
+    if letter in 'aeiou':
+        vowels_count += 1
+    elif letter.isalpha():
+        consonants_count += 1
+
+# Вывод результатов подсчета
+print("Количество гласных букв:", vowels_count)
+print("Количество согласных букв:", consonants_count)
