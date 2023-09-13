@@ -1,0 +1,18 @@
+# coding=windows-1251
+# Список этапов развития человека
+stages = [
+    "homo habilis",
+    "homo erectus",
+    "Homo neanderthalensis",
+    "homo sapiens",
+    "homo sapiens sapiens",
+    ]
+# Запрос ответов у студента
+student_stages = []
+for i in range(len(stages)):
+    student_stage = input(f"Введите этап развития человека #{i+1}: ")
+    student_stages.append(student_stage)
+
+# Вывод всех стадий развития, разделенных знаком "=>"
+result = " => ".join(student_stages)
+print(result)
