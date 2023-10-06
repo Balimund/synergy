@@ -1,0 +1,11 @@
+# coding=windows-1251
+# Ввод двух списков чисел
+list1 = list(map(int, input("Введите числа первого списка через пробел: ").split()))
+list2 = list(map(int, input("Введите числа второго списка через пробел: ").split()))
+ 
+# Поиск общих элементов в списках
+common_numbers = set(list1) & set(list2)
+count = len(common_numbers)
+ 
+# Вывод результата
+print("Количество чисел, содержащихся одновременно в обоих списках:", count)
