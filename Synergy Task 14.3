@@ -1,0 +1,9 @@
+# coding=windows-1251
+# Ввод чисел A и B
+A = int(input("Введите число A: "))
+B = int(input("Введите число B: "))
+
+# Вывод всех четных чисел на отрезке от A до B
+for num in range(A, B+1):
+    if num % 2 == 0:
+        print(num, end=" ")
