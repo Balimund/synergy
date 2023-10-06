@@ -1,0 +1,12 @@
+# coding=windows-1251
+# Ввод числа X
+X = int(input("Введите натуральное число: "))
+
+# Подсчет количества натуральных делителей числа X
+divisors_count = 0
+for i in range(1, X+1):
+    if X % i == 0:
+        divisors_count += 1
+
+# Вывод результата
+print("Количество натуральных делителей числа X:", divisors_count)
