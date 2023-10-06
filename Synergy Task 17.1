@@ -1,0 +1,11 @@
+# coding=windows-1251
+# Ввод числа N и чисел
+N = int(input("Введите количество чисел: "))
+numbers = list(map(int, input("Введите числа через пробел: ").split()))
+
+# Подсчет количества различных чисел
+unique_numbers = set(numbers)
+count = len(unique_numbers)
+
+# Вывод результата
+print("Количество различных чисел:", count)
