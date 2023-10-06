@@ -1,0 +1,16 @@
+# coding=windows-1251
+# Ввод пятизначного числа
+num = int(input("Введите пятизначное целое число: "))
+
+# Извлечение разрядов числа
+ones = num % 10 
+tens = (num // 10) % 10
+hundreds = (num // 100) % 10
+thousands = (num // 1000) % 10
+ten_thousands = (num // 10000) % 10
+
+# Вычисление результата
+result = (tens ** ones) * hundreds / (ten_thousands - thousands)
+
+# Вывод результата
+print("Результат:", result)
