@@ -1,0 +1,25 @@
+# coding=windows-1251
+# Ввод максимальной массы лодки m и количество рыбаков n
+m = int(input("Введите максимальную массу лодки: "))
+n = int(input("Введите количество рыбаков: "))
+
+# Ввод весов рыбаков
+weights = []
+for i in range(n):
+    weight = int(input("Введите вес рыбака: "))
+    weights.append(weight)
+
+# Сортировка весов рыбаков по убыванию
+weights.sort(reverse=True)
+
+# Переправка рыбаков на другой берег
+boats = 0
+left = 0
+right = n - 1
+while left <= right:
+    if weights[left] + weights[right] <= m:
+        left += 1
+        right -= 1
+    else:
+        left += 1
+    boats += 1
