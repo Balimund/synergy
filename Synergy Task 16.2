@@ -1,0 +1,13 @@
+# coding=windows-1251
+# Ввод числа N
+N = int(input("Введите число N: "))
+
+# Ввод N чисел
+numbers = list(map(int, input("Введите N чисел через пробел: ").split()))
+
+# Изменение порядка элементов массива
+numbers = numbers[::-1]
+
+# Вывод измененного массива
+for num in numbers:
+    print(num)
