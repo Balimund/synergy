@@ -1,0 +1,14 @@
+# coding=windows-1251
+# Ввод последовательности чисел
+sequence = input("Введите числа через пробел: ").split()
+
+# Создание множества для проверки уникальности чисел
+seen_numbers = set()
+
+# Проверка чисел и вывод результата
+for num in sequence:
+    if num in seen_numbers:
+        print("YES")
+    else:
+        print("NO")
+        seen_numbers.add(num)
