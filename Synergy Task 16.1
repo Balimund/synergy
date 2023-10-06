@@ -1,0 +1,16 @@
+# coding=windows-1251
+# Ввод числа N
+N = int(input("Введите число N: "))
+
+# Ввод N чисел
+numbers = []
+for i in range(N):
+    num = int(input("Введите число: "))
+    numbers.append(num)
+
+# Переворот массива
+numbers.reverse()
+
+# Вывод перевернутого массива
+for num in numbers:
+    print(num)
