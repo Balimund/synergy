@@ -1,0 +1,24 @@
+# coding=windows-1251
+import random
+
+# Создание матрицы 10x10
+matrix1 = [[random.randint(-50, 50) for _ in range(10)] for _ in range(10)]
+matrix2 = [[random.randint(-50, 50) for _ in range(10)] for _ in range(10)]
+
+# Сложение матриц
+matrix_sum = [[matrix1[i][j] + matrix2[i][j] for j in range(10)] for i in range(10)]
+
+# Вывод матрицы 1
+print("Матрица 1:")
+for row in matrix1:
+    print(row)
+
+# Вывод матрицы 2
+print("\nМатрица 2:")
+for row in matrix2:
+    print(row)
+
+# Вывод суммы матриц
+print("\nСумма матриц:")
+for row in matrix_sum:
+    print(row)
