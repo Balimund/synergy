@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang=‘ru’> 
+<head> 
+<title>
+Мой первый сайт
+</title> 
+</head> 
+<body> 
+<div class=‘container’>
+ <header> 
+<h1 class=‘title’>
+Мой первый сайт
+</h1> 
+</header> 
+<main>
+ <article> 
+<p class=‘text’>
+Привет, мир! Я учусь создавать сайты с помощью Figma.
+</p>
+<a class=‘link’ href=‘https://htmlacademy.ru’>
+HTML Academy
+</a> 
+</article>
+ </main> 
+<footer class=‘footer’>
+ <img class=‘img’ src=‘https://example.com/image.jpg’ alt=‘Пример веб-страницы’>
+ </footer>
+ </div>
+ </body> 
+</html>
