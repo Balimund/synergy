@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang=“ru”> 
+<head>
+ <meta charset=“utf-8”>
+ <title>
+Мой первый сайт
+</title> 
+<style>
+ body 
+{
+background-color:#F0F8FF;
+text-align:center;
+color:#00008B;
+font-family:Arial,sans-serif;
+font-size:16px
+} 
+header
+ h1{font-weight:bold} 
+footer a{text-decoration:underline} 
+img{width:300px;height:auto}
+ </style> 
+</head> 
+<body>
+ <header>
+<h1>
+Мой первый сайт
+</h1>
+</header>
+ <section>
+<p>
+Привет,мир!Я учусь создавать сайты с помощьюHTML.
+</p>
+</section> 
+<footer>
+<a href=“https://htmlacademy.ru”_blank>
+<u>
+HTMLAcademy
+</u>
+</a>
+</footer>
+ <aside>
+<img src=“example.com/image.jpg"_alt="Примервеб-страницы”>
+</aside>
+ </body> 
+</html>
