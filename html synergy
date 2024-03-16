@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang=“ru”> 
+<head> 
+<meta charset=“utf-8”>
+ <title>Мой первый сайт</title> 
+</head> 
+<body> 
+<header> 
+<h1>Мой первый сайт</h1> 
+</header> 
+<section> 
+<p>Привет, мир! Я учусь создавать сайты с помощью HTML.
+</p> 
+</section> 
+<footer>
+ <a href=“https://htmlacademy.ru” target=“_blank”>
+<u>
+HTML Academy
+</u>
+</a>
+ </footer> 
+<aside>
+ <img src=“example.com/image.jpg” alt=“Пример веб-страницы”>
+ </aside> 
+</body> 
+</html>
